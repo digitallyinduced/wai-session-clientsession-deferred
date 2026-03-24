@@ -1,11 +1,11 @@
 {-# LANGUAGE LambdaCase #-}
 
-module Network.Wai.Session.ClientSession (clientsessionStore) where
+module Network.Wai.Session.ClientSession.Deferred (clientsessionStore) where
 
 import Control.Monad
 import Data.ByteString (ByteString)
 import Control.Monad.IO.Class (liftIO, MonadIO)
-import Network.Wai.Session (Session, SessionStore)
+import Network.Wai.Session.Maybe (Session, SessionStore)
 import Data.IORef
 import Control.Error (hush)
 
