@@ -7,7 +7,9 @@ import Data.ByteString (ByteString)
 import Control.Monad.IO.Class (liftIO, MonadIO)
 import Network.Wai.Session.Maybe (Session, SessionStore)
 import Data.IORef
-import Control.Error (hush)
+-- | Convert an Either to a Maybe, discarding the error.
+hush :: Either a b -> Maybe b
+hush = either (const Nothing) Just
 
 import Web.ClientSession (Key, encryptIO, decrypt)
 import Data.Serialize (encode, decode, Serialize) -- Use cereal because clientsession does
