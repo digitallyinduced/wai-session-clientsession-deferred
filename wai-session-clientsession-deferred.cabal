@@ -1,17 +1,17 @@
-name:            wai-session-clientsession
-version:         0.1
+name:            wai-session-clientsession-deferred
+version:         1.0.0
 cabal-version:   >= 1.8
 license:         OtherLicense
 license-file:    COPYING
 category:        Web
 copyright:       © 2012 Stephen Paul Weber
 author:          Stephen Paul Weber <singpolyma@singpolyma.net>
-maintainer:      Stephen Paul Weber <singpolyma@singpolyma.net>
+maintainer:      support@digitallyinduced.com
 stability:       experimental
 tested-with:     GHC == 7.0.3
-synopsis:        Session store based on clientsession
-homepage:        https://github.com/singpolyma/wai-session-clientsession
-bug-reports:     https://github.com/singpolyma/wai-session-clientsession/issues
+synopsis:        Session store based on clientsession with deferred decryption
+homepage:        https://github.com/digitallyinduced/wai-session-clientsession-deferred
+bug-reports:     https://github.com/digitallyinduced/wai-session-clientsession-deferred/issues
 build-type:      Simple
 description:
         Provides a session store for use with wai-session.
@@ -32,8 +32,8 @@ library
                 cereal,
                 clientsession,
                 errors < 2.0,
-                wai-session
+                wai-session-maybe
 
 source-repository head
         type:     git
-        location: git://github.com/singpolyma/wai-session-clientsession.git
+        location: https://github.com/digitallyinduced/wai-session-clientsession-deferred.git
